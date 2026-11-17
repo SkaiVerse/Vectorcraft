@@ -16,7 +16,7 @@ jobs:
     runs-on: macos-15
     timeout-minutes: 330
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: dtolnay/rust-toolchain@stable
         with:
@@ -202,12 +202,12 @@ jobs:
           cp -R build/Build/Products/Release-iphoneos/VectorCraft.app Payload/
           zip -qr ../VectorCraft.ipa Payload
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: VectorCraft-ipa
           path: VectorCraft.ipa
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: build-logs
