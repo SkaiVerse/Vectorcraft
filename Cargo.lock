@@ -1264,7 +1264,7 @@ name = "craft-stream-codecs"
 version = "0.1.0"
 source = "git+https://github.com/storytold/craft-libs?rev=0cca4ac66f9f4576b3acc5f84d7a2a2ae9fb943e#0cca4ac66f9f4576b3acc5f84d7a2a2ae9fb943e"
 dependencies = [
- "fax",
+ "fax 0.2.7",
  "hayro-ccitt",
  "hayro-jbig2",
  "thiserror 2.0.21",
@@ -1955,6 +1955,12 @@ name = "fax"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "caf1079563223d5d59d83c85886a56e586cfd5c1a26292e971a0fa266531ac5a"
+
+[[package]]
+name = "fax"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "70ed8646f3993cad0585c6669ffba6f7e5440a0bfb0a1f16600cae33ce7cf307"
 
 [[package]]
 name = "fdeflate"
@@ -6068,7 +6074,7 @@ version = "0.11.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b63feaf3343d35b6ca4d50483f94843803b0f51634937cc2ec519fc32232bc52"
 dependencies = [
- "fax",
+ "fax 0.2.7",
  "flate2",
  "half",
  "quick-error 2.0.1",
@@ -6868,7 +6874,7 @@ dependencies = [
  "craft-ps",
  "craft-stream-codecs",
  "encoding_rs",
- "fax",
+ "fax 0.3.0",
  "flate2",
  "image",
  "kurbo 0.13.1",
@@ -6927,6 +6933,21 @@ dependencies = [
  "serde_json",
  "thiserror 2.0.21",
  "vectorcraft-testkit",
+]
+
+[[package]]
+name = "vectorcraft-ios"
+version = "0.24.1"
+dependencies = [
+ "egui",
+ "egui-wgpu",
+ "log",
+ "pollster 1.0.1",
+ "serde_json",
+ "vectorcraft-engine",
+ "vectorcraft-text",
+ "vectorcraft-ui-egui",
+ "wgpu",
 ]
 
 [[package]]
@@ -7127,7 +7148,7 @@ name = "vectorcraft-testkit"
 version = "0.24.1"
 dependencies = [
  "craft-image-codecs 0.1.0 (git+https://github.com/storytold/craft-libs?rev=a499742a9389f47d10cdc61e4cdbf4e5f07f48cd)",
- "fax",
+ "fax 0.3.0",
  "kurbo 0.13.1",
  "proptest",
  "serde_json",
